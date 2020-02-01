@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8433601854293130081}
   - component: {fileID: 8433601854293130110}
   - component: {fileID: 8433601854293130111}
+  - component: {fileID: 17324267}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -108,10 +109,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da80b6f3ce9d7c74ebca4439e78d8934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fovDistance: 4
+  eyesHeight: 1
+  fovDistance: 6
+  fohDistance: 1.5
+  suspicionTime: 5
+  sensedPlayerCooldown: 5
   path: {fileID: 0}
   deltaDistanceToWaypoint: 1
   timeBetweenWaypoints: 3
+  patrolSpeed: 2.5
+  chaseSpeed: 3
 --- !u!195 &8433601854293130110
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -146,3 +153,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6922887d611a6b8448fe23491e2fffbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxPathDistance: 40
+--- !u!114 &17324267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8433601854293130084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a466e901e89c764abee56dfb5f5db5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 1
