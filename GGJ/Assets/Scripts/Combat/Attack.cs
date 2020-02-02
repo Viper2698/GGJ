@@ -5,6 +5,7 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     [SerializeField] float attackRange = 1f;
+    [SerializeField] float attackDamage = 5f;
 
     Health target;
     float timeSinceAttack = Mathf.Infinity;
@@ -43,9 +44,24 @@ public class Attack : MonoBehaviour
     private void AttackAction()
     {
         transform.LookAt(target.transform);
-        Cancel();
-        //AttackAnimation();
+        //Cancel();
+        AttackAnimation();
 
+    }
+
+    private void AttackAnimation()
+    {
+        // just to be sure that CancelAttack trigger is not set
+        GetComponent<Animator>().ResetTrigger("CancelAttack");
+        // will trigger Hit()
+        GetComponent<Animator>().SetTrigger("Attack");
+    }
+
+    private void StopAttackAnimation()
+    {
+        // just to be sure that Attack trigger is not set
+        GetComponent<Animator>().ResetTrigger("Attack");
+        GetComponent<Animator>().SetTrigger("CancelAttack");
     }
 
     public bool CanAttack(GameObject currentTarget)
@@ -63,7 +79,7 @@ public class Attack : MonoBehaviour
 
     public void Cancel()
     {
-        //StopAttackAnimation();
+        StopAttackAnimation();
         GetComponent<Movement>().Cancel();
         //GameObject.FindWithTag("Player").tag = "asd";
         target = null;
@@ -71,7 +87,9 @@ public class Attack : MonoBehaviour
 
     void Hit()
     {
-        target.TurnToBarrel();
+        if (target == null)
+            return;
+        target.Damage(attackDamage);
         Cancel();
     }
 
