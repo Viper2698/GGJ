@@ -57,7 +57,7 @@ public class AIController : MonoBehaviour
 
         player = GameObject.FindWithTag("Player");
         
-       // if (player == null)
+        //if (player == null)
         //    timeSincePlayerDisappeared = 0;
 
         if (HasSensedEnemy() && attack.CanAttack(player)) // attack state
@@ -145,6 +145,9 @@ public class AIController : MonoBehaviour
 
     private bool HasSensedEnemy()
     {
+        if (player == null)
+            return false;
+
         // is the player in this object's field of view?
         var computedDistance = Vector3.Distance(player.transform.position, transform.position);
         Vector3 direction = player.transform.position - transform.position;

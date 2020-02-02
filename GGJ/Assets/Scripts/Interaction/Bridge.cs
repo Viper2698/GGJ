@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class Bridge : MonoBehaviour
 {
+    [SerializeField] int woodNeeded = 0;
+    [SerializeField] int ropeNeeded = 0;
+
     [SerializeField] Text alternativeText;
     [SerializeField] GameObject bridge;
     [SerializeField] Transform bridgeLocation;
@@ -15,13 +18,17 @@ public class Bridge : MonoBehaviour
         {
             if(Input.GetAxis("Interact") != 0)
             {
-               
-
-                // if player doesnt have the required items then sho wthe alternative text
-                alternativeText.gameObject.SetActive(true);
-                // else spawn the bridge
-                Instantiate(bridge, bridgeLocation.position, bridgeLocation.rotation);
-                Destroy(gameObject);
+                var inventory = collision.gameObject.GetComponent<CharacterInteraction>();
+                if (inventory.woodAmount >= woodNeeded
+                    && inventory.ropeAmount >= ropeNeeded)
+                {
+                    inventory.woodAmount -= woodNeeded;
+                    inventory.ropeAmount -= ropeNeeded;
+                    Instantiate(bridge, bridgeLocation.position, bridgeLocation.rotation);
+                    Destroy(gameObject);
+                }
+                else
+                    alternativeText.gameObject.SetActive(true);
             }
         }
     }
