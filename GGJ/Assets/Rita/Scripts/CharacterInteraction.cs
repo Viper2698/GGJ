@@ -13,7 +13,7 @@ public class CharacterInteraction : MonoBehaviour
     public int woodAmount, ropeAmount, spaceShipAmount = 0;
     // Start is called before the first frame update
     void Start()
-    {
+    {   
 
         updateInnventory(woodText, "Wood", 0);
         updateInnventory(ropeText, "Rope", 0);

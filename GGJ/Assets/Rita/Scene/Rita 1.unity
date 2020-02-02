@@ -13327,8 +13327,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   woodText: {fileID: 1686049687}
-  ropeText: {fileID: 0}
-  spaceShipText: {fileID: 0}
+  ropeText: {fileID: 1995233732}
+  spaceShipText: {fileID: 1398844645}
   woodAmount: 0
   ropeAmount: 0
   spaceShipAmount: 0
