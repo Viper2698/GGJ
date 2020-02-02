@@ -4,11 +4,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
     [SerializeField] float barrelTime = 5f;
     public TakeDamageEvent takeDamage;
+    public Slider healthUI;
+
+    public void Start()
+    {
+        healthUI.maxValue = health;
+    }
 
     // this class was created because generics can't be serialized
     // this way the takeDamage variable will be serialized
@@ -27,6 +34,7 @@ public class Health : MonoBehaviour
     private void Update()
     {
         UpdateBarrelTimer(barrel);
+        healthUI.value = health;
     }
 
     private void UpdateBarrelTimer(bool barrel)
