@@ -61,7 +61,7 @@ public class CharacterInteraction : MonoBehaviour
 
     public void updateInnventory(Text text, string item, int amount)
     {
-        //text.text = item + ":" + " " + amount.ToString();
+        text.text = item + ":" + " " + amount.ToString();
     }
 
    
