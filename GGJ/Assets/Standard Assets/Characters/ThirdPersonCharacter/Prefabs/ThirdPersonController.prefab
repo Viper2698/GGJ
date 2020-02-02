@@ -1469,8 +1469,8 @@ GameObject:
   - component: {fileID: 408730}
   - component: {fileID: 9579096}
   - component: {fileID: 5426510}
+  - component: {fileID: 2169373058407145704}
   - component: {fileID: 13615390}
-  - component: {fileID: 850570232307986206}
   - component: {fileID: 11444856}
   - component: {fileID: 11469404}
   m_Layer: 0
@@ -1532,6 +1532,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2169373058407145704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da5bc267fc814d740a052a2dd964b743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  piecesofWood: 0
+  ropeAmount: 0
+  SpaceShipPieces: 0
+  woodAmountText: {fileID: 0}
+  ropeAmountText: {fileID: 0}
+  spaceShipAmountText: {fileID: 0}
 --- !u!136 &13615390
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1546,23 +1564,6 @@ CapsuleCollider:
   m_Height: 1.6
   m_Direction: 1
   m_Center: {x: 0, y: 0.8, z: 0}
---- !u!114 &850570232307986206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 149790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0af23ec15b796cc48b2152a330c5c291, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
-  slots: []
-  allSlots: 0
-  enabledSlots: 0
-  slotHolder: {fileID: 0}
 --- !u!114 &11444856
 MonoBehaviour:
   m_ObjectHideFlags: 0
