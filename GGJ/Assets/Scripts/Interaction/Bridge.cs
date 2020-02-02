@@ -15,6 +15,8 @@ public class Bridge : MonoBehaviour
         {
             if(Input.GetAxis("Interact") != 0)
             {
+               
+
                 // if player doesnt have the required items then sho wthe alternative text
                 alternativeText.gameObject.SetActive(true);
                 // else spawn the bridge
