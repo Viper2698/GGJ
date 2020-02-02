@@ -923,6 +923,11 @@ PrefabInstance:
       propertyPath: m_CullingMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 024759ced2095f747a7e5c857f8e7a04,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 024759ced2095f747a7e5c857f8e7a04,
         type: 3}
       propertyPath: m_LocalPosition.x

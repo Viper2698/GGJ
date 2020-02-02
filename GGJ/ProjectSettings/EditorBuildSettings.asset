@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Rita/Scene/MainMenu/MainMenu.unity
     guid: ead051af10700b84ba27b626eedea4e6
   - enabled: 1
-    path: Assets/Rita/Scene/Level.unity
-    guid: 8cca5f785d3a922418dd03e4360041bf
+    path: Assets/Kate/Level.unity
+    guid: c6c50d56ebf7c2d4695e0b78dc0d3399
   - enabled: 1
     path: Assets/Rita/Scene/MainMenu/GameOver.unity
     guid: b8d3ac30319ede049a89a16724cf252c

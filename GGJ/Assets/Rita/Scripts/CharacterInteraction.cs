@@ -41,6 +41,8 @@ public class CharacterInteraction : MonoBehaviour
                 case "Wood":
                     woodAmount++;
                     Destroy(go);
+                    Debug.Log(woodAmount);
+                    woodText.text = woodAmount.ToString();
                     updateInnventory(woodText, "Wood", woodAmount);
                     Debug.Log(woodAmount);
                     break;
