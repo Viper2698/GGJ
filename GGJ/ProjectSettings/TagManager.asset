@@ -9,6 +9,7 @@ TagManager:
   - Rope
   - Inventory
   - NotAPlayer
+  - SpaceShipPart
   layers:
   - Default
   - TransparentFX
