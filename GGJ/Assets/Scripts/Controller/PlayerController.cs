@@ -6,9 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] float speed = 5f;
 
-    Animator myAnimator;
-    bool isJumping = false;
-    float horizontal, vertical;
+    float vertical;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,16 +27,5 @@ public class PlayerController : MonoBehaviour
        GetComponent<Rigidbody>().MovePosition(transform.position 
                                             + vertical * transform.forward * Time.fixedDeltaTime * speed
                                             );
-    }
-
-    private void LateUpdate()
-    {
-        Quaternion rotation = new Quaternion(0, Camera.main.transform.rotation.y, 0, 1);
-        GetComponent<Rigidbody>().MoveRotation(rotation);
-    }
-
-    void StopJump()
-    {
-        isJumping = false;
     }
 }
