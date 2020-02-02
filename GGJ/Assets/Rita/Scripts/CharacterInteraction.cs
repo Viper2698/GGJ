@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CharacterInteraction : MonoBehaviour
 {
@@ -50,6 +51,10 @@ public class CharacterInteraction : MonoBehaviour
                     break;
                 case "SpaceShipParts":
                     spaceShipAmount++;
+                    if(spaceShipAmount ==4)
+                    {   
+                        SceneManager.LoadScene("Win");
+                    }
                     Destroy(go);
                     updateInnventory(spaceShipText, "SpaceShip", spaceShipAmount);
                     break;
