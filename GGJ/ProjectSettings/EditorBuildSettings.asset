@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Rita/Scene/MainMenu/GameOver.unity
     guid: b8d3ac30319ede049a89a16724cf252c
+  - enabled: 1
+    path: Assets/Rita/Scene/Win.unity
+    guid: ec929a80d234a3e44b8d495fbbbe6dde
   m_configObjects: {}
