@@ -112,12 +112,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eyesHeight: 1
   fovDistance: 6
-  fohDistance: 1.5
-  suspicionTime: 5
+  fohDistance: 1
+  suspicionTime: 2
   sensedPlayerCooldown: 5
   path: {fileID: 0}
   deltaDistanceToWaypoint: 1
-  timeBetweenWaypoints: 3
+  timeBetweenWaypoints: 2
   patrolSpeed: 2.5
   chaseSpeed: 3
 --- !u!195 &8433601854293130110
